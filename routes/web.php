@@ -7,20 +7,17 @@ Route::get('/', function () {
     return view('auth.login');
 });
 Route::get('register', function () {
-    return view('auth.login');
+    return view('auth.register');
 });
 Route::get('forgot', function () {
-    return view('auth.login');
+    return view('auth.forgot-password');
 });
 Route::get('email-verif', function () {
-    return view('auth.login');
+    return view('auth.email-verification');
 });
 Route::get('reset-password', function () {
-    return view('auth.login');
-});
-Route::get('two-verif', function () {
-    return view('auth.login');
+    return view('auth.reset-password');
 });
 Route::get('change-success', function () {
-    return view('auth.login');
+    return view('auth.success');
 });
