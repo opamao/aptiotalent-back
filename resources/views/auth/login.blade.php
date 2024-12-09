@@ -50,7 +50,7 @@
                     <div class="col-lg-7 col-md-12 col-sm-12">
                         <div class="row justify-content-center align-items-center vh-100 overflow-auto flex-wrap">
                             <div class="col-md-7 mx-auto vh-100">
-                                <form action="#" class="vh-100">
+                                <form action="{{ url('admin-dashboard') }}" class="vh-100">
                                     <div class="vh-100 d-flex flex-column justify-content-between p-4 pb-0">
                                         <div class=" mx-auto mb-5 text-center">
                                             <img src="{{ URL::asset('') }}assets/img/logo.svg" class="img-fluid"
@@ -65,8 +65,7 @@
                                             <div class="mb-3">
                                                 <label class="form-label">Adresse email</label>
                                                 <div class="input-group">
-                                                    <input type="text" value=""
-                                                        class="form-control border-end-0">
+                                                    <input name="email" type="email" class="form-control border-end-0">
                                                     <span class="input-group-text border-start-0">
                                                         <i class="ti ti-mail"></i>
                                                     </span>
@@ -75,14 +74,14 @@
                                             <div class="mb-3">
                                                 <label class="form-label">Mot de passe</label>
                                                 <div class="pass-group">
-                                                    <input type="password" class="pass-input form-control">
+                                                    <input name="password" type="password" class="pass-input form-control">
                                                     <span class="ti toggle-password ti-eye-off"></span>
                                                 </div>
                                             </div>
                                             <div class="d-flex align-items-center justify-content-between mb-3">
                                                 <div class="d-flex align-items-center">
                                                     <div class="form-check form-check-md mb-0">
-                                                        <input class="form-check-input" id="remember_me"
+                                                        <input name="souvenir" class="form-check-input" id="remember_me"
                                                             type="checkbox">
                                                         <label for="remember_me"
                                                             class="form-check-label mt-0">Souviens-toi de moi</label>
@@ -94,7 +93,7 @@
                                                 </div>
                                             </div>
                                             <div class="mb-3">
-                                                <button type="submit" class="btn btn-primary w-100">Sign In</button>
+                                                <button type="submit" class="btn btn-primary w-100">Se connecter</button>
                                             </div>
                                             <div class="text-center">
                                                 <h6 class="fw-normal text-dark mb-0">Vous n'avez pas de compte?

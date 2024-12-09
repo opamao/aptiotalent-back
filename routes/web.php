@@ -21,3 +21,8 @@ Route::get('reset-password', function () {
 Route::get('change-success', function () {
     return view('auth.success');
 });
+
+// Admin entreprise, superadmin
+Route::get('admin-dashboard', function () {
+    return view('dashboard.entreprises.index');
+});
