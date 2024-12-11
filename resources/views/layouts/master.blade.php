@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" data-layout="transparent">
 
 <head>
 
@@ -60,7 +60,7 @@
 
 </head>
 
-<body>
+<body class="data-layout-transparent">
 
     <div id="global-loader">
         <div class="page-loader"></div>
@@ -81,8 +81,6 @@
 
         </div>
         <!-- /Page Wrapper -->
-
-        @include('layouts.footer')
 
     </div>
     <!-- /Page Wrapper -->

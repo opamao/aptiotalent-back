@@ -1,5 +1,5 @@
 @extends('layouts.master', [
-    'title' => 'Tableau de bord'
+    'title' => 'Tableau de bord Admin'
 ])
 
 @push('modale')
@@ -397,16 +397,16 @@
         <!-- Breadcrumb -->
         <div class="d-md-flex d-block align-items-center justify-content-between page-breadcrumb mb-3">
             <div class="my-auto mb-2">
-                <h2 class="mb-1">Admin Dashboard</h2>
+                <h2 class="mb-1">Admin Tableau de bord</h2>
                 <nav>
                     <ol class="breadcrumb mb-0">
                         <li class="breadcrumb-item">
-                            <a href="index.html"><i class="ti ti-smart-home"></i></a>
+                            <a href="#"><i class="ti ti-smart-home"></i></a>
                         </li>
                         <li class="breadcrumb-item">
-                            Dashboard
+                            Tableau de bord
                         </li>
-                        <li class="breadcrumb-item active" aria-current="page">Admin Dashboard</li>
+                        <li class="breadcrumb-item active" aria-current="page">Tableau de bord Admin</li>
                     </ol>
                 </nav>
             </div>
@@ -416,16 +416,16 @@
                         <a href="javascript:void(0);"
                             class="dropdown-toggle btn btn-white d-inline-flex align-items-center"
                             data-bs-toggle="dropdown">
-                            <i class="ti ti-file-export me-1"></i>Export
+                            <i class="ti ti-file-export me-1"></i>Exporter
                         </a>
                         <ul class="dropdown-menu  dropdown-menu-end p-3">
                             <li>
                                 <a href="javascript:void(0);" class="dropdown-item rounded-1"><i
-                                        class="ti ti-file-type-pdf me-1"></i>Export as PDF</a>
+                                        class="ti ti-file-type-pdf me-1"></i>Exporter en PDF</a>
                             </li>
                             <li>
                                 <a href="javascript:void(0);" class="dropdown-item rounded-1"><i
-                                        class="ti ti-file-type-xls me-1"></i>Export as Excel </a>
+                                        class="ti ti-file-type-xls me-1"></i>Exporter en Excel </a>
                             </li>
                         </ul>
                     </div>
