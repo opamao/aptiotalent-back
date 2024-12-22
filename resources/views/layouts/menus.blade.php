@@ -94,20 +94,22 @@
                                  <span class="menu-arrow"></span>
                              </a>
                              <ul>
-                                 <li><a href="{{ url('admin-dashboard') }}"
-                                         class="{{ Request::is('admin-dashboard') ? 'active' : '' }}">Admin Tableau de
-                                         bord</a>
+                                 <li>
+                                     <a href="{{ url('admin-dashboard') }}"
+                                         class="{{ Request::is('admin-dashboard') ? 'active' : '' }}">Admin</a>
                                  </li>
-                                 <li><a href="{{ url('employee-dashboard') }}"
-                                         class="{{ Request::is('employee-dashboard') ? 'active' : '' }}">Employee
-                                         Tableau
-                                         de bord</a></li>
-                                 <li><a href="{{ url('deals-dashboard') }}"
-                                         class="{{ Request::is('deals-dashboard') ? 'active' : '' }}">Deals Tableau de
-                                         bord</a></li>
-                                 <li><a href="{{ url('leads-dashboard') }}"
-                                         class="{{ Request::is('leads-dashboard') ? 'active' : '' }}">Leads Tableau de
-                                         bord</a></li>
+                                 <li>
+                                     <a href="{{ url('employee-dashboard') }}"
+                                         class="{{ Request::is('employee-dashboard') ? 'active' : '' }}">Employé</a>
+                                 </li>
+                                 <li>
+                                     <a href="{{ url('deals-dashboard') }}"
+                                         class="{{ Request::is('deals-dashboard') ? 'active' : '' }}">Deals</a>
+                                 </li>
+                                 <li>
+                                     <a href="{{ url('leads-dashboard') }}"
+                                         class="{{ Request::is('leads-dashboard') ? 'active' : '' }}">Leads</a>
+                                 </li>
                              </ul>
                          </li>
                          <li class="submenu">
@@ -719,8 +721,7 @@
                              </ul>
                          </li>
                          <li>
-                             <a href="{{ url('faq') }}"
-                                 class="{{ Request::is('faq') ? 'active' : '' }}">
+                             <a href="{{ url('faq') }}" class="{{ Request::is('faq') ? 'active' : '' }}">
                                  <i class="ti ti-question-mark"></i><span>FAQ’S</span>
                              </a>
                          </li>
@@ -730,8 +731,7 @@
                  <li>
                      <ul>
                          <li>
-                             <a href="{{ url('pricing') }}"
-                                 class="{{ Request::is('pricing') ? 'active' : '' }}">
+                             <a href="{{ url('pricing') }}" class="{{ Request::is('pricing') ? 'active' : '' }}">
                                  <i class="ti ti-file-dollar"></i><span>Pricing</span>
                              </a>
                          </li>

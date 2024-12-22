@@ -26,3 +26,11 @@ Route::get('change-success', function () {
 Route::get('admin-dashboard', function () {
     return view('dashboard.entreprises.index');
 });
+
+//Profile
+Route::get('profile', function () {
+    return view('profile.profile');
+});
+Route::get('profile-settings', function () {
+    return view('profile.profile-settings');
+});
