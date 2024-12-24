@@ -25,6 +25,9 @@
     <!-- Tabler Icon CSS -->
     <link rel="stylesheet" href="{{ URL::asset('') }}assets/plugins/tabler-icons/tabler-icons.css">
 
+    <!-- Select2 CSS -->
+    <link rel="stylesheet" href="{{ URL::asset('') }}assets/plugins/select2/css/select2.min.css">
+
     <!-- Fontawesome CSS -->
     <link rel="stylesheet" href="{{ URL::asset('') }}assets/plugins/fontawesome/css/fontawesome.min.css">
     <link rel="stylesheet" href="{{ URL::asset('') }}assets/plugins/fontawesome/css/all.min.css">
@@ -65,7 +68,8 @@
                                             <div class="mb-3">
                                                 <label class="form-label">Adresse email</label>
                                                 <div class="input-group">
-                                                    <input name="email" type="email" class="form-control border-end-0">
+                                                    <input name="email" type="email"
+                                                        class="form-control border-end-0">
                                                     <span class="input-group-text border-start-0">
                                                         <i class="ti ti-mail"></i>
                                                     </span>
@@ -74,7 +78,8 @@
                                             <div class="mb-3">
                                                 <label class="form-label">Mot de passe</label>
                                                 <div class="pass-group">
-                                                    <input name="password" type="password" class="pass-input form-control">
+                                                    <input name="password" type="password"
+                                                        class="pass-input form-control">
                                                     <span class="ti toggle-password ti-eye-off"></span>
                                                 </div>
                                             </div>
@@ -93,7 +98,8 @@
                                                 </div>
                                             </div>
                                             <div class="mb-3">
-                                                <button type="submit" class="btn btn-primary w-100">Se connecter</button>
+                                                <button type="submit" class="btn btn-primary w-100">Se
+                                                    connecter</button>
                                             </div>
                                             <div class="text-center">
                                                 <h6 class="fw-normal text-dark mb-0">Vous n'avez pas de compte?
@@ -137,7 +143,6 @@
                                     </div>
                                 </form>
                             </div>
-
                         </div>
                     </div>
                 </div>
@@ -154,6 +159,9 @@
 
     <!-- Feather Icon JS -->
     <script src="{{ URL::asset('') }}assets/js/feather.min.js"></script>
+
+    ◊<!-- Select2 JS -->
+    <script src="{{ URL::asset('') }}assets/plugins/select2/js/select2.min.js"></script>
 
     <!-- Custom JS -->
     <script src="{{ URL::asset('') }}assets/js/script.js"></script>

@@ -7,6 +7,11 @@
             <img src="{{ URL::asset('') }}assets/img/bg/bg-03.png" class="bg-3" alt="Img">
         </div>
         <div class="authentication-card w-100">
+            <div class="d-flex justify-content align-items-center">
+                @include('components.language-switch')
+                
+            </div>
+            <br>
             <div class="authen-overlay-item border w-100">
                 <h1 class="text-white display-1">Donner du pouvoir aux <br> gens grâce à une gestion <br> transparente.
                 </h1>
@@ -15,7 +20,8 @@
                 </div>
                 <div>
                     <p class="text-white fs-20 fw-semibold text-center">Gérez efficacement votre personnel, rationalisez
-                        <br> vos opérations sans effort.</p>
+                        <br> vos opérations sans effort.
+                    </p>
                 </div>
             </div>
         </div>

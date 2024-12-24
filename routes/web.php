@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\LanguageController;
 use Illuminate\Support\Facades\Route;
 
 //Authentification
@@ -34,3 +35,7 @@ Route::get('profile', function () {
 Route::get('profile-settings', function () {
     return view('profile.profile-settings');
 });
+
+
+//Change Language
+Route::post('language-switch', [LanguageController::class, 'languageSwitch'])->name('language.switch');
