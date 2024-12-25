@@ -32,31 +32,7 @@
     <!-- Tabler Icon CSS -->
     <link rel="stylesheet" href="{{ URL::asset('') }}assets/plugins/tabler-icons/tabler-icons.css">
 
-    <!-- Select2 CSS -->
-    <link rel="stylesheet" href="{{ URL::asset('') }}assets/plugins/select2/css/select2.min.css">
-
-    <!-- Fontawesome CSS -->
-    <link rel="stylesheet" href="{{ URL::asset('') }}assets/plugins/fontawesome/css/fontawesome.min.css">
-    <link rel="stylesheet" href="{{ URL::asset('') }}assets/plugins/fontawesome/css/all.min.css">
-
-    <!-- Datetimepicker CSS -->
-    <link rel="stylesheet" href="{{ URL::asset('') }}assets/css/bootstrap-datetimepicker.min.css">
-
-    <!-- Bootstrap Tagsinput CSS -->
-    <link rel="stylesheet" href="{{ URL::asset('') }}assets/plugins/bootstrap-tagsinput/bootstrap-tagsinput.css">
-
-    <!-- Summernote CSS -->
-    <link rel="stylesheet" href="{{ URL::asset('') }}assets/plugins/summernote/summernote-lite.min.css">
-
-    <!-- Daterangepikcer CSS -->
-    <link rel="stylesheet" href="{{ URL::asset('') }}assets/plugins/daterangepicker/daterangepicker.css">
-
-    <!-- Color Picker Css -->
-    <link rel="stylesheet" href="{{ URL::asset('') }}assets/plugins/flatpickr/flatpickr.min.css">
-    <link rel="stylesheet" href="{{ URL::asset('') }}assets/plugins/@simonwep/pickr/themes/nano.min.css">
-
-    <!-- Main CSS -->
-    <link rel="stylesheet" href="{{ URL::asset('') }}assets/css/style.css">
+    @stack('csss')
 
 </head>
 

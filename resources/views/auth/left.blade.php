@@ -9,18 +9,19 @@
         <div class="authentication-card w-100">
             <div class="d-flex justify-content align-items-center">
                 @include('components.language-switch')
-                
+
             </div>
             <br>
             <div class="authen-overlay-item border w-100">
-                <h1 class="text-white display-1">Donner du pouvoir aux <br> gens grâce à une gestion <br> transparente.
+                <h1 class="text-white display-1">
+                    {{ __('messages.empowering') }}
                 </h1>
                 <div class="my-4 mx-auto authen-overlay-img">
                     <img src="{{ URL::asset('') }}assets/img/bg/authentication-bg-01.png" alt="Img">
                 </div>
                 <div>
-                    <p class="text-white fs-20 fw-semibold text-center">Gérez efficacement votre personnel, rationalisez
-                        <br> vos opérations sans effort.
+                    <p class="text-white fs-20 fw-semibold text-center">
+                        {{ __('messages.efficiently') }}
                     </p>
                 </div>
             </div>

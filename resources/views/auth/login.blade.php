@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
 <head>
     <meta charset="utf-8">
@@ -8,7 +8,7 @@
     <meta name="keywords" content="admin, estimates, bootstrap, business, html5, responsive, Projects">
     <meta name="author" content="AptioTech - www.aptiotech.com">
     <meta name="robots" content="noindex, nofollow">
-    <title>AptioTalent - Connexion</title>
+    <title>AptioTalent - {{ __('messages.signin') }}</title>
 
     <!-- Favicon -->
     <link rel="shortcut icon" type="image/x-icon" href="{{ URL::asset('') }}assets/img/favicon.png">
@@ -54,6 +54,7 @@
                         <div class="row justify-content-center align-items-center vh-100 overflow-auto flex-wrap">
                             <div class="col-md-7 mx-auto vh-100">
                                 <form action="{{ url('admin-dashboard') }}" class="vh-100">
+                                    @csrf
                                     <div class="vh-100 d-flex flex-column justify-content-between p-4 pb-0">
                                         <div class=" mx-auto mb-5 text-center">
                                             <img src="{{ URL::asset('') }}assets/img/logo.svg" class="img-fluid"
@@ -61,12 +62,13 @@
                                         </div>
                                         <div class="">
                                             <div class="text-center mb-3">
-                                                <h2 class="mb-2">Se connecter</h2>
-                                                <p class="mb-0">Veuillez saisir vos coordonnées pour vous connecter
+                                                <h2 class="mb-2">{{ __('messages.signin') }}</h2>
+                                                <p class="mb-0">
+                                                    {{ __('messages.please') }}
                                                 </p>
                                             </div>
                                             <div class="mb-3">
-                                                <label class="form-label">Adresse email</label>
+                                                <label class="form-label">{{ __('messages.address_email') }}</label>
                                                 <div class="input-group">
                                                     <input name="email" type="email"
                                                         class="form-control border-end-0">
@@ -76,7 +78,7 @@
                                                 </div>
                                             </div>
                                             <div class="mb-3">
-                                                <label class="form-label">Mot de passe</label>
+                                                <label class="form-label">{{ __('messages.password') }}</label>
                                                 <div class="pass-group">
                                                     <input name="password" type="password"
                                                         class="pass-input form-control">
@@ -89,26 +91,30 @@
                                                         <input name="souvenir" class="form-check-input" id="remember_me"
                                                             type="checkbox">
                                                         <label for="remember_me"
-                                                            class="form-check-label mt-0">Souviens-toi de moi</label>
+                                                            class="form-check-label mt-0">{{ __('messages.remember') }}</label>
                                                     </div>
                                                 </div>
                                                 <div class="text-end">
-                                                    <a href="{{ url('forgot') }}" class="link-danger">Mot de passe
-                                                        oublié?</a>
+                                                    <a href="{{ url('forgot') }}" class="link-danger">
+                                                        {{ __('messages.forgot') }}
+                                                    </a>
                                                 </div>
                                             </div>
                                             <div class="mb-3">
-                                                <button type="submit" class="btn btn-primary w-100">Se
-                                                    connecter</button>
+                                                <button type="submit" class="btn btn-primary w-100">
+                                                    {{ __('messages.signin') }}
+                                                </button>
                                             </div>
                                             <div class="text-center">
-                                                <h6 class="fw-normal text-dark mb-0">Vous n'avez pas de compte?
-                                                    <a href="{{ url('register') }}" class="hover-a"> Créer un
-                                                        compte</a>
+                                                <h6 class="fw-normal text-dark mb-0">
+                                                    {{ __('messages.dont_have') }}
+                                                    <a href="{{ url('register') }}" class="hover-a">
+                                                        {{ __('messages.create_account') }}
+                                                    </a>
                                                 </h6>
                                             </div>
                                             <div class="login-or">
-                                                <span class="span-or">Ou</span>
+                                                <span class="span-or">{{ __('messages.or') }}</span>
                                             </div>
                                             <div class="mt-2">
                                                 <div class="d-flex align-items-center justify-content-center flex-wrap">
