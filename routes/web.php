@@ -38,6 +38,9 @@ Route::get('profile-settings', function () {
 Route::get('employee-dashboard', function () {
     return view('dashboard.entreprises.employee-dashboard');
 });
+Route::get('deals-dashboard', function () {
+    return view('dashboard.entreprises.deals-dashboard');
+});
 
 
 //Change Language
