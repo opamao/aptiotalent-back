@@ -9,7 +9,6 @@
         <div class="authentication-card w-100">
             <div class="d-flex justify-content align-items-center">
                 @include('components.language-switch')
-
             </div>
             <br>
             <div class="authen-overlay-item border w-100">

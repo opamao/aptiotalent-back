@@ -41,6 +41,21 @@ Route::get('employee-dashboard', function () {
 Route::get('deals-dashboard', function () {
     return view('dashboard.entreprises.deals-dashboard');
 });
+Route::get('leads-dashboard', function () {
+    return view('dashboard.entreprises.leads-dashboard');
+});
+Route::get('chat', function () {
+    return view('applications.chat');
+});
+Route::get('voice-call', function () {
+    return view('applications.voice-call');
+});
+Route::get('video-call', function () {
+    return view('applications.video-call');
+});
+Route::get('outgoing-call', function () {
+    return view('applications.outgoing-call');
+});
 
 
 //Change Language
