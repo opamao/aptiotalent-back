@@ -23,6 +23,11 @@ Route::get('change-success', function () {
     return view('auth.success');
 });
 
+//error
+Route::fallback(function () {
+    return response()->view('errors.error-404', [], 404);
+});
+
 // Admin entreprise, superadmin
 Route::get('admin-dashboard', function () {
     return view('dashboard.entreprises.index');
@@ -55,6 +60,12 @@ Route::get('video-call', function () {
 });
 Route::get('outgoing-call', function () {
     return view('applications.outgoing-call');
+});
+Route::get('incoming-call', function () {
+    return view('applications.incoming-call');
+});
+Route::get('call-history', function () {
+    return view('applications.call-history');
 });
 
 
