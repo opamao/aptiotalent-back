@@ -40,6 +40,8 @@ Route::get('profile', function () {
 Route::get('profile-settings', function () {
     return view('profile.profile-settings');
 });
+
+//Dashboard companie
 Route::get('employee-dashboard', function () {
     return view('dashboard.entreprises.employee-dashboard');
 });
@@ -49,6 +51,8 @@ Route::get('deals-dashboard', function () {
 Route::get('leads-dashboard', function () {
     return view('dashboard.entreprises.leads-dashboard');
 });
+
+// Chat & Call
 Route::get('chat', function () {
     return view('applications.chat');
 });
@@ -67,7 +71,32 @@ Route::get('incoming-call', function () {
 Route::get('call-history', function () {
     return view('applications.call-history');
 });
+Route::get('calendar', function () {
+    return view('applications.calendar');
+});
 
+// Dashboard Super Admin
+Route::get('dashboard', function () {
+    return view('dashboard.superadmin.dashboard');
+});
+Route::get('companies', function () {
+    return view('dashboard.superadmin.companies');
+});
+Route::get('subscription', function () {
+    return view('dashboard.superadmin.subscription');
+});
+Route::get('packages', function () {
+    return view('dashboard.superadmin.packages');
+});
+Route::get('packages-grid', function () {
+    return view('dashboard.superadmin.packages-grid');
+});
+Route::get('domain', function () {
+    return view('dashboard.superadmin.domain');
+});
+Route::get('purchase-transaction', function () {
+    return view('dashboard.superadmin.purchase-transaction');
+});
 
 //Change Language
 Route::post('language-switch', [LanguageController::class, 'languageSwitch'])->name('language.switch');

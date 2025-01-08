@@ -4,58 +4,58 @@
 
 @push('csss')
     <!-- Select2 CSS -->
-    <link rel="stylesheet" href="assets/plugins/select2/css/select2.min.css">
+    <link rel="stylesheet" href="{{ URL::asset('') }}assets/plugins/select2/css/select2.min.css">
 
     <!-- Fontawesome CSS -->
-    <link rel="stylesheet" href="assets/plugins/fontawesome/css/fontawesome.min.css">
-    <link rel="stylesheet" href="assets/plugins/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="{{ URL::asset('') }}assets/plugins/fontawesome/css/fontawesome.min.css">
+    <link rel="stylesheet" href="{{ URL::asset('') }}assets/plugins/fontawesome/css/all.min.css">
 
     <!-- Summernote CSS -->
-    <link rel="stylesheet" href="assets/plugins/summernote/summernote-lite.min.css">
+    <link rel="stylesheet" href="{{ URL::asset('') }}assets/plugins/summernote/summernote-lite.min.css">
 
     <!-- Datetimepicker CSS -->
-    <link rel="stylesheet" href="assets/css/bootstrap-datetimepicker.min.css">
+    <link rel="stylesheet" href="{{ URL::asset('') }}assets/css/bootstrap-datetimepicker.min.css">
 
     <!-- Daterangepikcer CSS -->
-    <link rel="stylesheet" href="assets/plugins/daterangepicker/daterangepicker.css">
+    <link rel="stylesheet" href="{{ URL::asset('') }}assets/plugins/daterangepicker/daterangepicker.css">
 
     <!-- Color Picker Css -->
-    <link rel="stylesheet" href="assets/plugins/flatpickr/flatpickr.min.css">
-    <link rel="stylesheet" href="assets/plugins/@simonwep/pickr/themes/nano.min.css">
+    <link rel="stylesheet" href="{{ URL::asset('') }}assets/plugins/flatpickr/flatpickr.min.css">
+    <link rel="stylesheet" href="{{ URL::asset('') }}assets/plugins/@simonwep/pickr/themes/nano.min.css">
 
     <!-- Main CSS -->
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="{{ URL::asset('') }}assets/css/style.css">
 @endpush
 
 @push('scripts')
     <!-- Slimscroll JS -->
-    <script src="assets/js/jquery.slimscroll.min.js"></script>
+    <script src="{{ URL::asset('') }}assets/js/jquery.slimscroll.min.js"></script>
 
     <!-- Color Picker JS -->
-    <script src="assets/plugins/@simonwep/pickr/pickr.es5.min.js"></script>
+    <script src="{{ URL::asset('') }}assets/plugins/@simonwep/pickr/pickr.es5.min.js"></script>
 
     <!-- Summernote JS -->
-    <script src="assets/plugins/summernote/summernote-lite.min.js"></script>
+    <script src="{{ URL::asset('') }}assets/plugins/summernote/summernote-lite.min.js"></script>
 
     <!-- Daterangepikcer JS -->
-    <script src="assets/js/moment.js"></script>
-    <script src="assets/plugins/daterangepicker/daterangepicker.js"></script>
-    <script src="assets/js/bootstrap-datetimepicker.min.js"></script>
+    <script src="{{ URL::asset('') }}assets/js/moment.js"></script>
+    <script src="{{ URL::asset('') }}assets/plugins/daterangepicker/daterangepicker.js"></script>
+    <script src="{{ URL::asset('') }}assets/js/bootstrap-datetimepicker.min.js"></script>
 
     <!-- Fullcalendar JS -->
-    <script src="assets/plugins/fullcalendar/index.global.min.js"></script>
-    <script src="assets/plugins/fullcalendar/calendar-data.js"></script>
+    <script src="{{ URL::asset('') }}assets/plugins/fullcalendar/index.global.min.js"></script>
+    <script src="{{ URL::asset('') }}assets/plugins/fullcalendar/calendar-data.js"></script>
 
     <!-- Select2 JS -->
-    <script src="assets/plugins/select2/js/select2.min.js"></script>
+    <script src="{{ URL::asset('') }}assets/plugins/select2/js/select2.min.js"></script>
 
     <!-- Theiastickysidebar JS -->
-    <script src="assets/plugins/theia-sticky-sidebar/theia-sticky-sidebar.min.js"></script>
-    <script src="assets/plugins/theia-sticky-sidebar/ResizeSensor.min.js"></script>
+    <script src="{{ URL::asset('') }}assets/plugins/theia-sticky-sidebar/theia-sticky-sidebar.min.js"></script>
+    <script src="{{ URL::asset('') }}assets/plugins/theia-sticky-sidebar/ResizeSensor.min.js"></script>
 
     <!-- Custom JS -->
-    <script src="assets/js/theme-colorpicker.js"></script>
-    <script src="assets/js/script.js"></script>
+    <script src="{{ URL::asset('') }}assets/js/theme-colorpicker.js"></script>
+    <script src="{{ URL::asset('') }}assets/js/script.js"></script>
 @endpush
 
 @section('content')

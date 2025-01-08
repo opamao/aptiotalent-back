@@ -167,6 +167,7 @@
                                  {{ Request::is('companies') ? 'active subdrop' : '' }}
                                   {{ Request::is('subscription') ? 'active subdrop' : '' }}
                                    {{ Request::is('packages') ? 'active subdrop' : '' }}
+                                    {{ Request::is('packages-grid') ? 'active subdrop' : '' }}
                                    {{ Request::is('domain') ? 'active subdrop' : '' }}
                                    {{ Request::is('purchase-transaction') ? 'active subdrop' : '' }}">
                                  <i class="ti ti-user-star"></i><span>Super Admin</span>
@@ -183,7 +184,7 @@
                                          class="{{ Request::is('subscription') ? 'active' : '' }}">Subscriptions</a>
                                  </li>
                                  <li><a href="{{ url('packages') }}"
-                                         class="{{ Request::is('packages') ? 'active' : '' }}">Packages</a>
+                                         class="{{ Request::is('packages') ? 'active' : '' }}{{ Request::is('packages-grid') ? 'active' : '' }}">Packages</a>
                                  </li>
                                  <li><a href="{{ url('domain') }}"
                                          class="{{ Request::is('domain') ? 'active' : '' }}">Domain</a></li>

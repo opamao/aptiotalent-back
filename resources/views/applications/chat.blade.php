@@ -3,31 +3,31 @@
 ])
 @push('csss')
     <!-- Select2 CSS -->
-    <link rel="stylesheet" href="assets/plugins/select2/css/select2.min.css">
+    <link rel="stylesheet" href="{{ URL::asset('') }}assets/plugins/select2/css/select2.min.css">
 
     <!-- Fontawesome CSS -->
-    <link rel="stylesheet" href="assets/plugins/fontawesome/css/fontawesome.min.css">
-    <link rel="stylesheet" href="assets/plugins/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="{{ URL::asset('') }}assets/plugins/fontawesome/css/fontawesome.min.css">
+    <link rel="stylesheet" href="{{ URL::asset('') }}assets/plugins/fontawesome/css/all.min.css">
 
     <!-- Color Picker Css -->
-    <link rel="stylesheet" href="assets/plugins/flatpickr/flatpickr.min.css">
-    <link rel="stylesheet" href="assets/plugins/@simonwep/pickr/themes/nano.min.css">
+    <link rel="stylesheet" href="{{ URL::asset('') }}assets/plugins/flatpickr/flatpickr.min.css">
+    <link rel="stylesheet" href="{{ URL::asset('') }}assets/plugins/@simonwep/pickr/themes/nano.min.css">
 
     <!-- Main CSS -->
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="{{ URL::asset('') }}assets/css/style.css">
 @endpush
 
 @push('scripts')
     <!-- Slimscroll JS -->
-    <script src="assets/js/jquery.slimscroll.min.js"></script>
+    <script src="{{ URL::asset('') }}assets/js/jquery.slimscroll.min.js"></script>
 
     <!-- Color Picker JS -->
-    <script src="assets/plugins/@simonwep/pickr/pickr.es5.min.js"></script>
+    <script src="{{ URL::asset('') }}assets/plugins/@simonwep/pickr/pickr.es5.min.js"></script>
 
     <!-- Custom JS -->
-    <script src="assets/js/chat.js"></script>
-    <script src="assets/js/theme-colorpicker.js"></script>
-    <script src="assets/js/script.js"></script>
+    <script src="{{ URL::asset('') }}assets/js/chat.js"></script>
+    <script src="{{ URL::asset('') }}assets/js/theme-colorpicker.js"></script>
+    <script src="{{ URL::asset('') }}assets/js/script.js"></script>
 @endpush
 
 @section('content')
