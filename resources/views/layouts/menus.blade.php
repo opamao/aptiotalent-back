@@ -221,7 +221,7 @@
                      <ul>
                          <li>
                              <a href="{{ url('contacts-grid') }}"
-                                 class="{{ Request::is('contacts-grid') ? 'active' : '' }}">
+                                 class="{{ Request::is('contacts-grid') ? 'active' : '' }}{{ Request::is('contact-details') ? 'active' : '' }}">
                                  <i class="ti ti-user-shield"></i><span>Contacts</span>
                              </a>
                          </li>

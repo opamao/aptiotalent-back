@@ -98,5 +98,31 @@ Route::get('purchase-transaction', function () {
     return view('dashboard.superadmin.purchase-transaction');
 });
 
+//CRM
+Route::get('contacts-grid', function () {
+    return view('crm.contacts.contacts');
+});
+Route::get('contact-details', function () {
+    return view('crm.contacts.contact-details');
+});
+Route::get('companies-grid', function () {
+    return view('crm.companies.companies-crm');
+});
+Route::get('company-details', function () {
+    return view('crm.companies.company-details');
+});
+Route::get('deals-grid', function () {
+    return view('crm.deals.deals');
+});
+Route::get('pipeline', function () {
+    return view('crm.pipelines.pipeline');
+});
+Route::get('analytics', function () {
+    return view('crm.analytics.analytics');
+});
+Route::get('activity', function () {
+    return view('crm.activities.activity');
+});
+
 //Change Language
 Route::post('language-switch', [LanguageController::class, 'languageSwitch'])->name('language.switch');
