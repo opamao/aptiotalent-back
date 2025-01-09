@@ -370,12 +370,12 @@
                                  <i class="ti ti-user-shield"></i><span>Candidates</span>
                              </a>
                          </li>
-                         <li>
+                         {{-- <li>
                              <a href="{{ url('refferals') }}"
                                  class="{{ Request::is('refferals') ? 'active' : '' }}">
                                  <i class="ti ti-ux-circle"></i><span>Referrals</span>
                              </a>
-                         </li>
+                         </li> --}}
                      </ul>
                  </li>
                  {{-- <li class="menu-title"><span>FINANCE & ACCOUNTS</span></li>

@@ -1230,7 +1230,7 @@
 															<img src="assets/img/profiles/avatar-25.jpg" alt="Profile">
 														</span>
 														<div class="flex-grow-1">
-															<p class="mb-1">New student record <span class="text-dark fw-semibold"> George</span> 
+															<p class="mb-1">New student record <span class="text-dark fw-semibold"> George</span>
 																is created by <span class="text-dark fw-semibold">Teressa</span>
 															</p>
 															<span>2 hrs ago</span>
@@ -1287,7 +1287,7 @@
 												href="bussiness-settings.html">
 												<i class="ti ti-settings me-1"></i>Settings
 											</a>
-											
+
 											<a class="dropdown-item d-inline-flex align-items-center p-0 py-2"
 												href="profile-settings.html">
 												<i class="ti ti-circle-arrow-up me-1"></i>My Account
@@ -4756,7 +4756,7 @@
 						<div class="me-2 mb-2">
 							<div class="d-flex align-items-center border bg-white rounded p-1 me-2 icon-list">
                                 <a href="candidates-kanban.html" class="btn btn-icon btn-sm me-1"><i class="ti ti-layout-kanban"></i></a>
-								<a href="candidates.html" class="btn btn-icon btn-sm me-1"><i class="ti ti-list-tree"></i></a>                                
+								<a href="candidates.html" class="btn btn-icon btn-sm me-1"><i class="ti ti-list-tree"></i></a>
 								<a href="candidates-grid.html" class="btn btn-icon btn-sm active bg-primary text-white"><i class="ti ti-layout-grid"></i></a>
 							</div>
 						</div>
@@ -4869,11 +4869,11 @@
                                         <div class="d-flex flex-column">
                                             <div class="d-flex flex-wrap mb-1">
                                                 <h6 class="fs-16 fw-semibold me-1"><a href="#" data-bs-toggle="offcanvas" data-bs-target="#candidate_details">Harold Gaynor</a></h6>
-                                                <span class="badge bg-primary-transparent">Cand-001</span>                                            
-                                            </div>                                        
+                                                <span class="badge bg-primary-transparent">Cand-001</span>
+                                            </div>
                                             <p class="text-gray fs-13 fw-normal">harold@example.com</p>
                                         </div>
-									</div>                                    
+									</div>
 								</div>
                                 <div class="bg-light rounder p-2">
                                     <div class="d-flex align-items-center justify-content-between mb-2">
@@ -4888,7 +4888,7 @@
                                         <h6 class="text-gray fs-14 fw-normal">Status</h6>
                                         <span class="fs-10 fw-medium badge bg-purple"> <i class="ti ti-point-filled"></i> New</span>
                                     </div>
-                                </div>                                
+                                </div>
 							</div>
 						</div>
 					</div>
@@ -4903,11 +4903,11 @@
                                         <div class="d-flex flex-column">
                                             <div class="d-flex flex-wrap mb-1">
                                                 <h6 class="fs-16 fw-semibold me-1"> <a href="#" data-bs-toggle="offcanvas" data-bs-target="#candidate_details">Sandra Ornellas</a></h6>
-                                                <span class="badge bg-primary-transparent">Cand-002</span>                                            
-                                            </div>                                        
+                                                <span class="badge bg-primary-transparent">Cand-002</span>
+                                            </div>
                                             <p class="text-gray fs-13 fw-normal">sandra@example.com</p>
                                         </div>
-									</div>                                    
+									</div>
 								</div>
                                 <div class="bg-light rounder p-2">
                                     <div class="d-flex align-items-center justify-content-between mb-2">
@@ -4937,11 +4937,11 @@
                                         <div class="d-flex flex-column">
                                             <div class="d-flex flex-wrap mb-1">
                                                 <h6 class="fs-16 fw-semibold me-1"><a href="#" data-bs-toggle="offcanvas" data-bs-target="#candidate_details">John Harris</a></h6>
-                                                <span class="badge bg-primary-transparent">Cand-003</span>                                            
-                                            </div>                                        
+                                                <span class="badge bg-primary-transparent">Cand-003</span>
+                                            </div>
                                             <p class="text-gray fs-13 fw-normal">john@example.com</p>
                                         </div>
-									</div>                                    
+									</div>
 								</div>
                                 <div class="bg-light rounder p-2">
                                     <div class="d-flex align-items-center justify-content-between mb-2">
@@ -4971,11 +4971,11 @@
                                         <div class="d-flex flex-column">
                                             <div class="d-flex flex-wrap mb-1">
                                                 <h6 class="fs-16 fw-semibold me-1"><a href="#" data-bs-toggle="offcanvas" data-bs-target="#candidate_details">Carole Langan</a></h6>
-                                                <span class="badge bg-primary-transparent">Cand-004</span>                                            
-                                            </div>                                        
+                                                <span class="badge bg-primary-transparent">Cand-004</span>
+                                            </div>
                                             <p class="text-gray fs-13 fw-normal">carole@example.com</p>
                                         </div>
-									</div>                                    
+									</div>
 								</div>
                                 <div class="bg-light rounder p-2">
                                     <div class="d-flex align-items-center justify-content-between mb-2">
@@ -5005,11 +5005,11 @@
                                         <div class="d-flex flex-column">
                                             <div class="d-flex flex-wrap mb-1">
                                                 <h6 class="fs-16 fw-semibold me-1"><a href="#" data-bs-toggle="offcanvas" data-bs-target="#candidate_details">Charles Marks</a></h6>
-                                                <span class="badge bg-primary-transparent">Cand-005</span>                                            
-                                            </div>                                        
+                                                <span class="badge bg-primary-transparent">Cand-005</span>
+                                            </div>
                                             <p class="text-gray fs-13 fw-normal">charles@example.com</p>
                                         </div>
-									</div>                                    
+									</div>
 								</div>
                                 <div class="bg-light rounder p-2">
                                     <div class="d-flex align-items-center justify-content-between mb-2">
@@ -5039,11 +5039,11 @@
                                         <div class="d-flex flex-column">
                                             <div class="d-flex flex-wrap mb-1">
                                                 <h6 class="fs-16 fw-semibold me-1"><a href="#" data-bs-toggle="offcanvas" data-bs-target="#candidate_details">Kerry Drake</a></h6>
-                                                <span class="badge bg-primary-transparent">Cand-006</span>                                            
-                                            </div>                                        
+                                                <span class="badge bg-primary-transparent">Cand-006</span>
+                                            </div>
                                             <p class="text-gray fs-13 fw-normal">kerry@example.com</p>
                                         </div>
-									</div>                                    
+									</div>
 								</div>
                                 <div class="bg-light rounder p-2">
                                     <div class="d-flex align-items-center justify-content-between mb-2">
@@ -5073,11 +5073,11 @@
                                         <div class="d-flex flex-column">
                                             <div class="d-flex flex-wrap mb-1">
                                                 <h6 class="fs-16 fw-semibold me-1"><a href="#" data-bs-toggle="offcanvas" data-bs-target="#candidate_details">David Carmona</a></h6>
-                                                <span class="badge bg-primary-transparent">Cand-007</span>                                            
-                                            </div>                                        
+                                                <span class="badge bg-primary-transparent">Cand-007</span>
+                                            </div>
                                             <p class="text-gray fs-13 fw-normal">david@example.com</p>
                                         </div>
-									</div>                                    
+									</div>
 								</div>
                                 <div class="bg-light rounder p-2">
                                     <div class="d-flex align-items-center justify-content-between mb-2">
@@ -5107,11 +5107,11 @@
                                         <div class="d-flex flex-column">
                                             <div class="d-flex flex-wrap mb-1">
                                                 <h6 class="fs-16 fw-semibold me-1"><a href="#" data-bs-toggle="offcanvas" data-bs-target="#candidate_details">Margaret Soto</a></h6>
-                                                <span class="badge bg-primary-transparent">Cand-008</span>                                            
-                                            </div>                                        
+                                                <span class="badge bg-primary-transparent">Cand-008</span>
+                                            </div>
                                             <p class="text-gray fs-13 fw-normal">margaret@example.com</p>
                                         </div>
-									</div>                                    
+									</div>
 								</div>
                                 <div class="bg-light rounder p-2">
                                     <div class="d-flex align-items-center justify-content-between mb-2">
@@ -5141,11 +5141,11 @@
                                         <div class="d-flex flex-column">
                                             <div class="d-flex flex-wrap mb-1">
                                                 <h6 class="fs-16 fw-semibold me-1"><a href="#" data-bs-toggle="offcanvas" data-bs-target="#candidate_details">Jeffrey Thaler</a></h6>
-                                                <span class="badge bg-primary-transparent">Cand-009</span>                                            
-                                            </div>                                        
+                                                <span class="badge bg-primary-transparent">Cand-009</span>
+                                            </div>
                                             <p class="text-gray fs-13 fw-normal">jeffrey@example.com</p>
                                         </div>
-									</div>                                    
+									</div>
 								</div>
                                 <div class="bg-light rounder p-2">
                                     <div class="d-flex align-items-center justify-content-between mb-2">
@@ -5175,11 +5175,11 @@
                                         <div class="d-flex flex-column">
                                             <div class="d-flex flex-wrap mb-1">
                                                 <h6 class="fs-16 fw-semibold me-1"><a href="#" data-bs-toggle="offcanvas" data-bs-target="#candidate_details">Joyce Golston</a></h6>
-                                                <span class="badge bg-primary-transparent">Cand-010</span>                                            
-                                            </div>                                        
+                                                <span class="badge bg-primary-transparent">Cand-010</span>
+                                            </div>
                                             <p class="text-gray fs-13 fw-normal">joyce@example.com</p>
                                         </div>
-									</div>                                    
+									</div>
 								</div>
                                 <div class="bg-light rounder p-2">
                                     <div class="d-flex align-items-center justify-content-between mb-2">
@@ -5209,11 +5209,11 @@
                                         <div class="d-flex flex-column">
                                             <div class="d-flex flex-wrap mb-1">
                                                 <h6 class="fs-16 fw-semibold me-1"><a href="#" data-bs-toggle="offcanvas" data-bs-target="#candidate_details">Cedric Rosalez</a></h6>
-                                                <span class="badge bg-primary-transparent">Cand-011</span>                                            
-                                            </div>                                        
+                                                <span class="badge bg-primary-transparent">Cand-011</span>
+                                            </div>
                                             <p class="text-gray fs-13 fw-normal">cedric@example.com</p>
                                         </div>
-									</div>                                    
+									</div>
 								</div>
                                 <div class="bg-light rounder p-2">
                                     <div class="d-flex align-items-center justify-content-between mb-2">
@@ -5243,11 +5243,11 @@
                                         <div class="d-flex flex-column">
                                             <div class="d-flex flex-wrap mb-1">
                                                 <h6 class="fs-16 fw-semibold me-1"><a href="#" data-bs-toggle="offcanvas" data-bs-target="#candidate_details">Lillie Diaz</a></h6>
-                                                <span class="badge bg-primary-transparent">Cand-012</span>                                            
-                                            </div>                                        
+                                                <span class="badge bg-primary-transparent">Cand-012</span>
+                                            </div>
                                             <p class="text-gray fs-13 fw-normal">lillie@example.com</p>
                                         </div>
-									</div>                                    
+									</div>
 								</div>
                                 <div class="bg-light rounder p-2">
                                     <div class="d-flex align-items-center justify-content-between mb-2">
@@ -5285,7 +5285,7 @@
 		<!-- Candidate Details -->
 		<div class="offcanvas offcanvas-end offcanvas-large" tabindex="-1" id="candidate_details">
 			<div class="offcanvas-header border-bottom">
-				<h4 class="d-flex align-items-center">Candidate Details 
+				<h4 class="d-flex align-items-center">Candidate Details
 					<span class="badge bg-primary-transparent fw-medium ms-2">Cand-001</span>
 				</h4>
 				<button type="button" class="btn-close custom-btn-close" data-bs-dismiss="offcanvas" aria-label="Close">
@@ -5571,7 +5571,7 @@
 
 	<!-- Datatable JS -->
 	<script src="assets/js/jquery.dataTables.min.js"></script>
-	<script src="assets/js/dataTables.bootstrap5.min.js"></script>	
+	<script src="assets/js/dataTables.bootstrap5.min.js"></script>
 
 	<!-- Daterangepikcer JS -->
 	<script src="assets/js/moment.js"></script>

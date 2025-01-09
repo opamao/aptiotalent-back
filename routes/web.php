@@ -124,5 +124,13 @@ Route::get('activity', function () {
     return view('crm.activities.activity');
 });
 
+//Jobs
+Route::get('job-grid', function () {
+    return view('jobs.job-list');
+});
+Route::get('candidates-grid', function () {
+    return view('jobs.candidates');
+});
+
 //Change Language
 Route::post('language-switch', [LanguageController::class, 'languageSwitch'])->name('language.switch');
