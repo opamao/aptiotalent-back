@@ -100,28 +100,28 @@ Route::get('purchase-transaction', function () {
 
 //CRM
 Route::get('contacts-grid', function () {
-    return view('crm.contacts.contacts');
+    return view('crm.contacts');
 });
 Route::get('contact-details', function () {
-    return view('crm.contacts.contact-details');
+    return view('crm.contact-details');
 });
 Route::get('companies-grid', function () {
-    return view('crm.companies.companies-crm');
+    return view('crm.companies-crm');
 });
 Route::get('company-details', function () {
-    return view('crm.companies.company-details');
+    return view('crm.company-details');
 });
 Route::get('deals-grid', function () {
-    return view('crm.deals.deals');
+    return view('crm.deals');
 });
 Route::get('pipeline', function () {
-    return view('crm.pipelines.pipeline');
+    return view('crm.pipeline');
 });
 Route::get('analytics', function () {
-    return view('crm.analytics.analytics');
+    return view('crm.analytics');
 });
 Route::get('activity', function () {
-    return view('crm.activities.activity');
+    return view('crm.activity');
 });
 
 //Jobs
@@ -130,6 +130,42 @@ Route::get('job-grid', function () {
 });
 Route::get('candidates-grid', function () {
     return view('jobs.candidates');
+});
+
+//Assets
+Route::get('assetes', function () {
+    return view('assets.assets');
+});
+Route::get('asset-categories', function () {
+    return view('assets.asset-categories');
+});
+
+//Users Management
+Route::get('users', function () {
+    return view('roles.users');
+});
+Route::get('roles-permissions', function () {
+    return view('roles.roles-permissions');
+});
+
+//Repports
+Route::get('expenses-report', function () {
+    return view('reports.expenses-report');
+});
+Route::get('invoice-report', function () {
+    return view('reports.invoice-report');
+});
+Route::get('payment-report', function () {
+    return view('reports.payment-report');
+});
+Route::get('user-report', function () {
+    return view('reports.user-report');
+});
+Route::get('employee-report', function () {
+    return view('reports.employee-report');
+});
+Route::get('payslip-report', function () {
+    return view('reports.payslip-report');
 });
 
 //Change Language

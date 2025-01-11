@@ -425,24 +425,24 @@
                      <ul>
                          <li class="submenu">
                              <a href="javascript:void(0);"
-                                 class="{{ Request::is('assets') ? 'active subdrop' : '' }}
+                                 class="{{ Request::is('assetes') ? 'active subdrop' : '' }}
                                  {{ Request::is('asset-categories') ? 'active subdrop' : '' }}">
                                  <i class="ti ti-cash"></i><span>Assets</span>
                                  <span class="menu-arrow"></span>
                              </a>
                              <ul>
                                  <li>
-                                     <a href="{{ url('assets') }}"
-                                         class="{{ Request::is('assets') ? 'active' : '' }}
-                                         {{ Request::is('asset-categories') ? 'active' : '' }}
-                                          ">Assets</a>
+                                     <a href="{{ url('assetes') }}"
+                                         class="{{ Request::is('assetes') ? 'active' : '' }}">Assets</a>
                                  </li>
-                                 <li><a href="{{ url('asset-categories') }}"
+                                 <li>
+                                     <a href="{{ url('asset-categories') }}"
                                          class="{{ Request::is('asset-categories') ? 'active' : '' }}">Asset
-                                         Categories</a></li>
+                                         Categories</a>
+                                 </li>
                              </ul>
                          </li>
-                         <li class="submenu">
+                         {{-- <li class="submenu">
                              <a href="javascript:void(0);"
                                  class="{{ Request::is('knowledgebase') ? 'active subdrop' : '' }}
                                  {{ Request::is('activity') ? 'active subdrop' : '' }}
@@ -458,7 +458,7 @@
                                          class="{{ Request::is('activity') ? 'active' : '' }}">Activities</a>
                                  </li>
                              </ul>
-                         </li>
+                         </li> --}}
                          <li class="submenu">
                              <a href="javascript:void(0);"
                                  class="{{ Request::is('users') ? 'active subdrop' : '' }}
