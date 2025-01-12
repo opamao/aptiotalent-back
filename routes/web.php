@@ -40,6 +40,51 @@ Route::get('profile', function () {
 Route::get('profile-settings', function () {
     return view('profile.profile-settings');
 });
+Route::get('security-settings', function () {
+    return view('profile.security-settings');
+});
+Route::get('notification-settings', function () {
+    return view('profile.notification-settings');
+});
+Route::get('connected-apps', function () {
+    return view('profile.connected-apps');
+});
+Route::get('bussiness-settings', function () {
+    return view('profile.bussiness-settings');
+});
+Route::get('seo-settings', function () {
+    return view('profile.seo-settings');
+});
+Route::get('prefixes', function () {
+    return view('profile.prefixes');
+});
+Route::get('preferences', function () {
+    return view('profile.preferences');
+});
+Route::get('currencies', function () {
+    return view('profile.currencies');
+});
+Route::get('tax-rates', function () {
+    return view('profile.tax-rates');
+});
+Route::get('payment-gateways', function () {
+    return view('profile.payment-gateways');
+});
+Route::get('sms-settings', function () {
+    return view('profile.sms-settings');
+});
+Route::get('sms-template', function () {
+    return view('profile.sms-template');
+});
+Route::get('email-template', function () {
+    return view('profile.email-template');
+});
+Route::get('email-settings', function () {
+    return view('profile.email-settings');
+});
+Route::get('leave-type', function () {
+    return view('profile.leave-type');
+});
 
 //Dashboard companie
 Route::get('employee-dashboard', function () {
@@ -166,6 +211,36 @@ Route::get('employee-report', function () {
 });
 Route::get('payslip-report', function () {
     return view('reports.payslip-report');
+});
+
+//Blogs
+Route::get('blogs', function () {
+    return view('blogs.blogs');
+});
+Route::get('blog-categories', function () {
+    return view('blogs.blog-categories');
+});
+Route::get('blog-comments', function () {
+    return view('blogs.blog-comments');
+});
+Route::get('blog-tags', function () {
+    return view('blogs.blog-tags');
+});
+
+//FAQs
+Route::get('faq', function () {
+    return view('faqs.faq');
+});
+
+//Terms
+Route::get('pricing', function () {
+    return view('terms.pricing');
+});
+Route::get('privacy-policy', function () {
+    return view('terms.privacy-policy');
+});
+Route::get('terms-condition', function () {
+    return view('terms.terms-condition');
 });
 
 //Change Language
