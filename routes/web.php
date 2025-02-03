@@ -85,6 +85,21 @@ Route::get('email-settings', function () {
 Route::get('leave-type', function () {
     return view('profile.leave-type');
 });
+Route::get('job-category', function () {
+    return view('profile.job-category');
+});
+Route::get('job-type', function () {
+    return view('profile.job-type');
+});
+Route::get('job-level', function () {
+    return view('profile.job-level');
+});
+Route::get('job-experience', function () {
+    return view('profile.job-experience');
+});
+Route::get('job-qualification', function () {
+    return view('profile.job-qualification');
+});
 
 //Dashboard companie
 Route::get('employee-dashboard', function () {

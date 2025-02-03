@@ -536,11 +536,44 @@
                                     {{ Request::is('payment-gateways') ? 'active subdrop' : '' }}
                                  {{ Request::is('tax-rates') ? 'active subdrop' : '' }}
                                   {{ Request::is('currencies') ? 'active subdrop' : '' }}
+                                  {{ Request::is('job-category') ? 'active subdrop' : '' }}
+                                  {{ Request::is('job-type') ? 'active subdrop' : '' }}
+                                  {{ Request::is('job-level') ? 'active subdrop' : '' }}
+                                  {{ Request::is('job-experience') ? 'active subdrop' : '' }}
+                                  {{ Request::is('job-qualification') ? 'active subdrop' : '' }}
                                      ">
                                  <i class="ti ti-settings"></i><span>Settings</span>
                                  <span class="menu-arrow"></span>
                              </a>
                              <ul>
+                                 <li class="submenu submenu-two">
+                                     <a href="javascript:void(0);"
+                                         class="{{ Request::is('job-category') ? 'active subdrop' : '' }}
+                                  {{ Request::is('job-type') ? 'active subdrop' : '' }}
+                                  {{ Request::is('job-level') ? 'active subdrop' : '' }}
+                                  {{ Request::is('job-experience') ? 'active subdrop' : '' }}
+                                  {{ Request::is('job-qualification') ? 'active subdrop' : '' }}
+                                    ">Jobs
+                                         Settings<span class="menu-arrow inside-submenu"></span></a>
+                                     <ul>
+                                         <li><a href="{{ url('job-category') }}"
+                                                 class="{{ Request::is('job-category') ? 'active' : '' }}">Job
+                                                 Category</a>
+                                         </li>
+                                         <li><a href="{{ url('job-type') }}"
+                                                 class="{{ Request::is('job-type') ? 'active' : '' }}">Job Type</a>
+                                         </li>
+                                         <li><a href="{{ url('job-level') }}"
+                                                 class="{{ Request::is('job-level') ? 'active' : '' }}">Job Level</a>
+                                         </li>
+                                         <li><a href="{{ url('job-experience') }}"
+                                                 class="{{ Request::is('job-experience') ? 'active' : '' }}">Job
+                                                 Experience</a></li>
+                                         <li><a href="{{ url('job-qualification') }}"
+                                                 class="{{ Request::is('job-qualification') ? 'active' : '' }}">Job
+                                                 Qualification</a></li>
+                                     </ul>
+                                 </li>
                                  <li class="submenu submenu-two">
                                      <a href="javascript:void(0);"
                                          class="{{ Request::is('profile-settings') ? 'active subdrop' : '' }}
