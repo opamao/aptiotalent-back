@@ -1,6 +1,20 @@
 <?php
 
+use App\Http\Controllers\BlogsController;
+use App\Http\Controllers\CategoriesBlogsController;
+use App\Http\Controllers\CommentsBlogsController;
+use App\Http\Controllers\FaqsController;
+use App\Http\Controllers\JobCategorieController;
+use App\Http\Controllers\JobExperienceController;
+use App\Http\Controllers\JobLevelController;
+use App\Http\Controllers\JobQualificationController;
+use App\Http\Controllers\JobsController;
+use App\Http\Controllers\JobTypeController;
 use App\Http\Controllers\LanguageController;
+use App\Http\Controllers\PricingController;
+use App\Http\Controllers\PrivacyController;
+use App\Http\Controllers\TagsBlogsController;
+use App\Http\Controllers\TermsController;
 use Illuminate\Support\Facades\Route;
 
 //Authentification
@@ -85,21 +99,11 @@ Route::get('email-settings', function () {
 Route::get('leave-type', function () {
     return view('profile.leave-type');
 });
-Route::get('job-category', function () {
-    return view('profile.job-category');
-});
-Route::get('job-type', function () {
-    return view('profile.job-type');
-});
-Route::get('job-level', function () {
-    return view('profile.job-level');
-});
-Route::get('job-experience', function () {
-    return view('profile.job-experience');
-});
-Route::get('job-qualification', function () {
-    return view('profile.job-qualification');
-});
+Route::resource('job-category', JobCategorieController::class);
+Route::resource('job-type', JobTypeController::class);
+Route::resource('job-level', JobLevelController::class);
+Route::resource('job-experience', JobExperienceController::class);
+Route::resource('job-qualification', JobQualificationController::class);
 
 //Dashboard companie
 Route::get('employee-dashboard', function () {
@@ -185,9 +189,7 @@ Route::get('activity', function () {
 });
 
 //Jobs
-Route::get('job-grid', function () {
-    return view('jobs.job-list');
-});
+Route::resource('job-grid', JobsController::class);
 Route::get('candidates-grid', function () {
     return view('jobs.candidates');
 });
@@ -229,34 +231,18 @@ Route::get('payslip-report', function () {
 });
 
 //Blogs
-Route::get('blogs', function () {
-    return view('blogs.blogs');
-});
-Route::get('blog-categories', function () {
-    return view('blogs.blog-categories');
-});
-Route::get('blog-comments', function () {
-    return view('blogs.blog-comments');
-});
-Route::get('blog-tags', function () {
-    return view('blogs.blog-tags');
-});
+Route::resource('blogs', BlogsController::class);
+Route::resource('blog-categories', CategoriesBlogsController::class);
+Route::resource('blog-comments', CommentsBlogsController::class);
+Route::resource('blog-tags', TagsBlogsController::class);
 
 //FAQs
-Route::get('faq', function () {
-    return view('faqs.faq');
-});
+Route::resource('faq', FaqsController::class);
 
 //Terms
-Route::get('pricing', function () {
-    return view('terms.pricing');
-});
-Route::get('privacy-policy', function () {
-    return view('terms.privacy-policy');
-});
-Route::get('terms-condition', function () {
-    return view('terms.terms-condition');
-});
+Route::resource('pricing', PricingController::class);
+Route::resource('privacy-policy', PrivacyController::class);
+Route::resource('terms-condition', TermsController::class);
 
 //Change Language
 Route::post('language-switch', [LanguageController::class, 'languageSwitch'])->name('language.switch');
