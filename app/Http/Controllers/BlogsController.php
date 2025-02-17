@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Blogs;
 use Illuminate\Http\Request;
 
 class BlogsController extends Controller
@@ -11,7 +12,9 @@ class BlogsController extends Controller
      */
     public function index()
     {
-        return view('blogs.blogs');
+        // fais la requête sur les 12 plus reçents, après faire un pagination
+        $blogs = Blogs::all();
+        return view('blogs.blogs', compact('blogs'));
     }
 
     /**

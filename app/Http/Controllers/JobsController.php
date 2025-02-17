@@ -2,6 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\JobCategories;
+use App\Models\JobExperience;
+use App\Models\JobLevel;
+use App\Models\JobQualification;
+use App\Models\JobTypes;
 use Illuminate\Http\Request;
 
 class JobsController extends Controller
@@ -11,7 +16,13 @@ class JobsController extends Controller
      */
     public function index()
     {
-        return view('jobs.job-list');
+        $categories = JobCategories::all();
+        $level = JobLevel::all();
+        $types = JobTypes::all();
+        $experiences = JobExperience::all();
+        $qualifications = JobQualification::all();
+
+        return view('jobs.job-list', compact('categories', 'level', 'types', 'experiences', 'qualifications'));
     }
 
     /**

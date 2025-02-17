@@ -158,8 +158,7 @@
                         </ul>
                     </div>
                     <div class="dropdown">
-                        <a href="javascript:void(0);"
-                            class="dropdown-toggle btn btn-white d-inline-flex align-items-center"
+                        <a href="javascript:void(0);" class="dropdown-toggle btn btn-white d-inline-flex align-items-center"
                             data-bs-toggle="dropdown">
                             Sort By : Last 7 Days
                         </a>
@@ -566,52 +565,14 @@
                         <i class="ti ti-x"></i>
                     </button>
                 </div>
-                <form action="job-list.html">
+                <form action="{{ route('job-grid.store') }}" method="POST" role="form">
+                    @csrf
                     <div class="modal-body pb-0">
                         <div class="row">
-                            <div class="contact-grids-tab pt-0">
-                                <ul class="nav nav-underline" id="myTab" role="tablist">
-                                    <li class="nav-item" role="presentation">
-                                        <button class="nav-link active" id="info-tab" data-bs-toggle="tab"
-                                            data-bs-target="#basic-info" type="button" role="tab"
-                                            aria-selected="true">Basic Information</button>
-                                    </li>
-                                    <li class="nav-item" role="presentation">
-                                        <button class="nav-link" id="address-tab" data-bs-toggle="tab"
-                                            data-bs-target="#address" type="button" role="tab"
-                                            aria-selected="false">Location</button>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="tab-content" id="myTabContent">
+                            <div class="tab-content">
                                 <div class="tab-pane fade show active" id="basic-info" role="tabpanel"
                                     aria-labelledby="info-tab" tabindex="0">
                                     <div class="row">
-                                        <div class="col-md-12">
-                                            <div
-                                                class="d-flex align-items-center flex-wrap row-gap-3 bg-light w-100 rounded p-3 mb-4">
-                                                <div
-                                                    class="d-flex align-items-center justify-content-center avatar avatar-xxl rounded-circle border border-dashed me-2 flex-shrink-0 text-dark frames">
-                                                    <i class="ti ti-photo text-gray-2 fs-16"></i>
-                                                </div>
-                                                <div class="profile-upload">
-                                                    <div class="mb-2">
-                                                        <h6 class="mb-1">Upload Profile Image</h6>
-                                                        <p class="fs-12">Image should be below 4 mb</p>
-                                                    </div>
-                                                    <div class="profile-uploader d-flex align-items-center">
-                                                        <div class="drag-upload-btn btn btn-sm btn-primary me-2">
-                                                            Upload
-                                                            <input type="file" class="form-control image-sign"
-                                                                multiple="">
-                                                        </div>
-                                                        <a href="javascript:void(0);"
-                                                            class="btn btn-light btn-sm">Cancel</a>
-                                                    </div>
-
-                                                </div>
-                                            </div>
-                                        </div>
                                         <div class="col-md-12">
                                             <div class="mb-3">
                                                 <label class="form-label">Job Title <span class="text-danger">
@@ -630,11 +591,13 @@
                                             <div class="mb-3">
                                                 <label class="form-label">Job Category <span class="text-danger">
                                                         *</span></label>
-                                                <select class="select">
-                                                    <option>Select</option>
-                                                    <option>IOS</option>
-                                                    <option>Web & Application</option>
-                                                    <option>Networking</option>
+                                                <select required name="category" class="select">
+                                                    <option value="">Select</option>
+                                                    @foreach ($categories as $itemCategory)
+                                                        <option value="{{ $itemCategory->idjob_categorie }}">
+                                                            {{ $itemCategory->libelle_categorie }}
+                                                        </option>
+                                                    @endforeach
                                                 </select>
                                             </div>
                                         </div>
@@ -642,10 +605,13 @@
                                             <div class="mb-3">
                                                 <label class="form-label">Job Type <span class="text-danger">
                                                         *</span></label>
-                                                <select class="select">
-                                                    <option>Select</option>
-                                                    <option>Full Time</option>
-                                                    <option>Part Time</option>
+                                                <select name="type" required class="select">
+                                                    <option value="">Select</option>
+                                                    @foreach ($types as $itemType)
+                                                        <option value="{{ $itemType->idjob_type }}">
+                                                            {{ $itemType->libelle_type }}
+                                                        </option>
+                                                    @endforeach
                                                 </select>
                                             </div>
                                         </div>
@@ -653,12 +619,13 @@
                                             <div class="mb-3">
                                                 <label class="form-label">Job Level <span class="text-danger">
                                                         *</span></label>
-                                                <select class="select">
-                                                    <option>Select</option>
-                                                    <option>Team Lead</option>
-                                                    <option>Manager</option>
-                                                    <option>Senior</option>
-                                                    <option>junior</option>
+                                                <select required name="level" class="select">
+                                                    <option value="">Select</option>
+                                                    @foreach ($level as $itemLevel)
+                                                        <option value="{{ $itemLevel->idjob_level }}">
+                                                            {{ $itemLevel->libelle_level }}
+                                                        </option>
+                                                    @endforeach
                                                 </select>
                                             </div>
                                         </div>
@@ -666,11 +633,13 @@
                                             <div class="mb-3">
                                                 <label class="form-label">Experience <span class="text-danger">
                                                         *</span></label>
-                                                <select class="select">
-                                                    <option>Select</option>
-                                                    <option>Entry Level</option>
-                                                    <option>Mid Level</option>
-                                                    <option>Expert</option>
+                                                <select required name="experience" class="select">
+                                                    <option value="">Select</option>
+                                                    @foreach ($experiences as $itemExpe)
+                                                        <option value="{{ $itemExpe->idjob_experience }}">
+                                                            {{ $itemExpe->libelle_experience }}
+                                                        </option>
+                                                    @endforeach
                                                 </select>
                                             </div>
                                         </div>
@@ -678,11 +647,13 @@
                                             <div class="mb-3">
                                                 <label class="form-label">Qualification <span class="text-danger">
                                                         *</span></label>
-                                                <select class="select">
+                                                <select required name="qualification" class="select">
                                                     <option>Select</option>
-                                                    <option>Bachelore Degree</option>
-                                                    <option>Master Degree</option>
-                                                    <option>Others</option>
+                                                    @foreach ($qualifications as $itemQual)
+                                                        <option value="{{ $itemQual->idjob_qualification }}">
+                                                            {{ $itemQual->libelle_qualification }}
+                                                        </option>
+                                                    @endforeach
                                                 </select>
                                             </div>
                                         </div>
@@ -690,10 +661,11 @@
                                             <div class="mb-3">
                                                 <label class="form-label">Gender <span class="text-danger">
                                                         *</span></label>
-                                                <select class="select">
-                                                    <option>Select</option>
-                                                    <option>Male</option>
-                                                    <option>Female</option>
+                                                <select required name="gender" class="select">
+                                                    <option value="">Select</option>
+                                                    <option value="Homme / Male">Male</option>
+                                                    <option value="Femme / Female">Female</option>
+                                                    <option value="Deux / Two">Deux</option>
                                                 </select>
                                             </div>
                                         </div>
@@ -701,22 +673,14 @@
                                             <div class="mb-3">
                                                 <label class="form-label">Min. Sallary <span class="text-danger">
                                                         *</span></label>
-                                                <select class="select">
-                                                    <option>Select</option>
-                                                    <option>10k - 15k</option>
-                                                    <option>15k -20k</option>
-                                                </select>
+                                                <input type="text" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="mb-3">
                                                 <label class="form-label">Max. Sallary <span class="text-danger">
                                                         *</span></label>
-                                                <select class="select">
-                                                    <option>Select</option>
-                                                    <option>40k - 50k</option>
-                                                    <option>50k - 60k</option>
-                                                </select>
+                                                <input type="text" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-md-6">
@@ -738,17 +702,6 @@
                                                 <input type="text" class="form-control">
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-light me-2"
-                                            data-bs-dismiss="modal">Cancel</button>
-                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                                            data-bs-target="#success_modal">Save & Next</button>
-                                    </div>
-                                </div>
-                                <div class="tab-pane fade" id="address" role="tabpanel" aria-labelledby="address-tab"
-                                    tabindex="0">
-                                    <div class="row">
                                         <div class="col-md-12">
                                             <div class="mb-3">
                                                 <label class="form-label">Address <span class="text-danger">
@@ -760,54 +713,14 @@
                                             <div class="mb-3">
                                                 <label class="form-label">Country <span class="text-danger">
                                                         *</span></label>
-                                                <select class="select">
-                                                    <option>Select</option>
-                                                    <option>USA</option>
-                                                    <option>Canada</option>
-                                                    <option>Germany</option>
-                                                    <option>France</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="mb-3">
-                                                <label class="form-label">State <span class="text-danger">
-                                                        *</span></label>
-                                                <select class="select">
-                                                    <option>Select</option>
-                                                    <option>California</option>
-                                                    <option>New York</option>
-                                                    <option>Texas</option>
-                                                    <option>Florida</option>
-                                                </select>
+                                                <input type="text" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="mb-3">
                                                 <label class="form-label">City <span class="text-danger">
                                                         *</span></label>
-                                                <select class="select">
-                                                    <option>Select</option>
-                                                    <option>Los Angeles</option>
-                                                    <option>San Diego</option>
-                                                    <option>Fresno</option>
-                                                    <option>San Francisco</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="mb-3">
-                                                <label class="form-label">Zip Code <span class="text-danger">
-                                                        *</span></label>
                                                 <input type="text" class="form-control">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-12">
-                                            <div class="map-grid mb-3">
-                                                <iframe
-                                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6509170.989457427!2d-123.80081967108484!3d37.192957227641294!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fb9fe5f285e3d%3A0x8b5109a227086f55!2sCalifornia%2C%20USA!5e0!3m2!1sen!2sin!4v1669181581381!5m2!1sen!2sin"
-                                                    style="border:0;" allowfullscreen="" loading="lazy"
-                                                    referrerpolicy="no-referrer-when-downgrade" class="w-100"></iframe>
                                             </div>
                                         </div>
                                     </div>
