@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('question');
             $table->text('reponse');
             $table->uuid('entreprise_id')->nullable();
-            $table->foreign('entreprise_id')->references('id')->on('users');
+            $table->foreign('entreprise_id')->references('idcompany')->on('company');
             $table->uuid('candidat_id')->nullable();
             $table->foreign('candidat_id')->references('idcandidat')->on('candidates');
             $table->timestamps();

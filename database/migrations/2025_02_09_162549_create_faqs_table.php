@@ -15,7 +15,6 @@ return new class extends Migration
             $table->uuid('idfaq')->primary();
             $table->string('questions');
             $table->longText('answers');
-            $table->string('categories');
             $table->timestamps();
         });
     }

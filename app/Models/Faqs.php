@@ -17,7 +17,6 @@ class Faqs extends Model
     protected $fillable = [
         'questions',
         'answers',
-        'categories',
     ];
 
     protected $table = 'faqs';

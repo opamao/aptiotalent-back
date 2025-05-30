@@ -62,7 +62,7 @@
 
 @section('content')
     <div class="content">
-
+        @include('layouts.status')
         <!-- Breadcrumb -->
         <div class="d-md-flex d-block align-items-center justify-content-between page-breadcrumb mb-3">
             <div class="my-auto mb-2">
@@ -82,8 +82,8 @@
             <div class="d-flex my-xl-auto right-content align-items-center flex-wrap ">
                 <div class="mb-2">
                     <a href="#" data-bs-toggle="modal" data-bs-target="#add_blog-category"
-                        class="btn btn-primary d-flex align-items-center"><i class="ti ti-circle-plus me-2"></i>Add
-                        Category</a>
+                        class="btn btn-primary d-flex align-items-center"><i class="ti ti-circle-plus me-2"></i>Ajouter une
+                        catégorie</a>
                 </div>
                 <div class="ms-2 head-icons">
                     <a href="javascript:void(0);" class="" data-bs-toggle="tooltip" data-bs-placement="top"
@@ -95,11 +95,53 @@
         </div>
         <!-- /Breadcrumb -->
 
-
+        <!-- Add Tag -->
+        <div class="modal fade" id="add_blog-category">
+            <div class="modal-dialog modal-dialog-centered modal-md">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Ajouter une catégorie de blog</h4>
+                        <button type="button" class="btn-close custom-btn-close" data-bs-dismiss="modal"
+                            aria-label="Close">
+                            <i class="ti ti-x"></i>
+                        </button>
+                    </div>
+                    <form action="{{ route('blog-categories.store') }}" method="POST" role="form">
+                        @csrf
+                        <div class="modal-body pb-0">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="mb-3">
+                                        <label class="form-label">Catégorie</label>
+                                        <input class="form-control" placeholder="Catégorie" type="text" required
+                                            name="libelle">
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="mb-3">
+                                        <label class="form-label">Statut</label>
+                                        <select name="statut" required class="select">
+                                            <option value="active">Active</option>
+                                            <option value="inactive">Inactive</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-white border me-2"
+                                data-bs-dismiss="modal">Annuler</button>
+                            <button type="submit" class="btn btn-primary">Ajouter la catégorie</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- /Add Tag -->
 
         <div class="card">
             <div class="card-header d-flex align-items-center justify-content-between flex-wrap row-gap-3">
-                <h5>Blog Categories List</h5>
+                <h5>Liste des catégories blog</h5>
                 <div class="d-flex my-xl-auto right-content align-items-center flex-wrap row-gap-3">
                     <div class="dropdown">
                         <a href="javascript:void(0);" class="dropdown-toggle btn btn-white d-inline-flex align-items-center"
@@ -126,323 +168,121 @@
                     <table class="table datatable">
                         <thead class="thead-light">
                             <tr>
-                                <th class="no-sort">
-                                    <div class="form-check form-check-md">
-                                        <input class="form-check-input" type="checkbox" id="select-all">
-                                    </div>
-                                </th>
-                                <th>Category</th>
-                                <th>Created Date</th>
-                                <th>Status</th>
+                                <th>Catégorie</th>
+                                <th>Date de création</th>
+                                <th>Statut</th>
                                 <th></th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>
-                                    <div class="form-check form-check-md">
-                                        <input class="form-check-input" type="checkbox">
-                                    </div>
-                                </td>
-                                <td class="text-dark">Evlovution</td>
-                                <td>12 Sep 2024</td>
-
-                                <td><span class="badge badge-success"><i class="ti ti-point-filled"></i>Active</span></td>
-                                <td>
-                                    <div class="action-icon d-inline-flex">
-                                        <a href="#" class="me-2" data-bs-toggle="modal"
-                                            data-bs-target="#edit_blog-category"><i class="ti ti-edit"></i></a>
-                                        <a href="javascript:void(0);" data-bs-toggle="modal"
-                                            data-bs-target="#delete_modal"><i class="ti ti-trash"></i></a>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div class="form-check form-check-md">
-                                        <input class="form-check-input" type="checkbox">
-                                    </div>
-                                </td>
-                                <td class="text-dark">Guide</td>
-                                <td>24 Oct 2024</td>
-
-                                <td><span class="badge badge-success"><i class="ti ti-point-filled"></i>Active</span></td>
-                                <td>
-                                    <div class="action-icon d-inline-flex">
-                                        <a href="#" class="me-2" data-bs-toggle="modal"
-                                            data-bs-target="#edit_blog-category"><i class="ti ti-edit"></i></a>
-                                        <a href="javascript:void(0);" data-bs-toggle="modal"
-                                            data-bs-target="#delete_modal"><i class="ti ti-trash"></i></a>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div class="form-check form-check-md">
-                                        <input class="form-check-input" type="checkbox">
-                                    </div>
-                                </td>
-                                <td class="text-dark">Security</td>
-                                <td>18 Feb 2024</td>
-
-                                <td><span class="badge badge-success"><i class="ti ti-point-filled"></i>Active</span></td>
-                                <td>
-                                    <div class="action-icon d-inline-flex">
-                                        <a href="#" class="me-2" data-bs-toggle="modal"
-                                            data-bs-target="#edit_blog-category"><i class="ti ti-edit"></i></a>
-                                        <a href="javascript:void(0);" data-bs-toggle="modal"
-                                            data-bs-target="#delete_modal"><i class="ti ti-trash"></i></a>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div class="form-check form-check-md">
-                                        <input class="form-check-input" type="checkbox">
-                                    </div>
-                                </td>
-                                <td class="text-dark">Recruitment</td>
-                                <td>17 Oct 2024</td>
-
-                                <td><span class="badge badge-success"><i class="ti ti-point-filled"></i>Active</span></td>
-                                <td>
-                                    <div class="action-icon d-inline-flex">
-                                        <a href="#" class="me-2" data-bs-toggle="modal"
-                                            data-bs-target="#edit_blog-category"><i class="ti ti-edit"></i></a>
-                                        <a href="javascript:void(0);" data-bs-toggle="modal"
-                                            data-bs-target="#delete_modal"><i class="ti ti-trash"></i></a>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div class="form-check form-check-md">
-                                        <input class="form-check-input" type="checkbox">
-                                    </div>
-                                </td>
-                                <td class="text-dark">Payroll</td>
-                                <td>20 Jul 2024</td>
-
-                                <td><span class="badge badge-success"><i class="ti ti-point-filled"></i>Active</span></td>
-                                <td>
-                                    <div class="action-icon d-inline-flex">
-                                        <a href="#" class="me-2" data-bs-toggle="modal"
-                                            data-bs-target="#edit_blog-category"><i class="ti ti-edit"></i></a>
-                                        <a href="javascript:void(0);" data-bs-toggle="modal"
-                                            data-bs-target="#delete_modal"><i class="ti ti-trash"></i></a>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div class="form-check form-check-md">
-                                        <input class="form-check-input" type="checkbox">
-                                    </div>
-                                </td>
-                                <td class="text-dark">Benefits</td>
-                                <td>10 Apr 2024</td>
-
-                                <td><span class="badge badge-success"><i class="ti ti-point-filled"></i>Active</span></td>
-                                <td>
-                                    <div class="action-icon d-inline-flex">
-                                        <a href="#" class="me-2" data-bs-toggle="modal"
-                                            data-bs-target="#edit_blog-category"><i class="ti ti-edit"></i></a>
-                                        <a href="javascript:void(0);" data-bs-toggle="modal"
-                                            data-bs-target="#delete_modal"><i class="ti ti-trash"></i></a>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div class="form-check form-check-md">
-                                        <input class="form-check-input" type="checkbox">
-                                    </div>
-                                </td>
-                                <td class="text-dark">Employee</td>
-                                <td>29 Aug 2024</td>
-
-                                <td><span class="badge badge-success"><i class="ti ti-point-filled"></i>Active</span></td>
-                                <td>
-                                    <div class="action-icon d-inline-flex">
-                                        <a href="#" class="me-2" data-bs-toggle="modal"
-                                            data-bs-target="#edit_blog-category"><i class="ti ti-edit"></i></a>
-                                        <a href="javascript:void(0);" data-bs-toggle="modal"
-                                            data-bs-target="#delete_modal"><i class="ti ti-trash"></i></a>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div class="form-check form-check-md">
-                                        <input class="form-check-input" type="checkbox">
-                                    </div>
-                                </td>
-                                <td class="text-dark">Onboarding</td>
-                                <td>22 Feb 2024</td>
-
-                                <td><span class="badge badge-success"><i class="ti ti-point-filled"></i>Active</span></td>
-                                <td>
-                                    <div class="action-icon d-inline-flex">
-                                        <a href="#" class="me-2" data-bs-toggle="modal"
-                                            data-bs-target="#edit_blog-category"><i class="ti ti-edit"></i></a>
-                                        <a href="javascript:void(0);" data-bs-toggle="modal"
-                                            data-bs-target="#delete_modal"><i class="ti ti-trash"></i></a>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div class="form-check form-check-md">
-                                        <input class="form-check-input" type="checkbox">
-                                    </div>
-                                </td>
-                                <td class="text-dark">Implementation</td>
-                                <td>03 Nov 2024</td>
-
-                                <td><span class="badge badge-success"><i class="ti ti-point-filled"></i>Active</span></td>
-                                <td>
-                                    <div class="action-icon d-inline-flex">
-                                        <a href="#" class="me-2" data-bs-toggle="modal"
-                                            data-bs-target="#edit_blog-category"><i class="ti ti-edit"></i></a>
-                                        <a href="javascript:void(0);" data-bs-toggle="modal"
-                                            data-bs-target="#delete_modal"><i class="ti ti-trash"></i></a>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div class="form-check form-check-md">
-                                        <input class="form-check-input" type="checkbox">
-                                    </div>
-                                </td>
-                                <td class="text-dark">Management</td>
-                                <td>17 Dec 2024</td>
-
-                                <td><span class="badge badge-success"><i class="ti ti-point-filled"></i>Active</span></td>
-                                <td>
-                                    <div class="action-icon d-inline-flex">
-                                        <a href="#" class="me-2" data-bs-toggle="modal"
-                                            data-bs-target="#edit_blog-category"><i class="ti ti-edit"></i></a>
-                                        <a href="javascript:void(0);" data-bs-toggle="modal"
-                                            data-bs-target="#delete_modal"><i class="ti ti-trash"></i></a>
-                                    </div>
-                                </td>
-                            </tr>
-
-
-
+                            @foreach ($categorie as $list)
+                                <tr>
+                                    <td class="text-dark">{{ $list->libelle_categorie }}</td>
+                                    <td>{{ $list->created_at }}</td>
+                                    <td>
+                                        @if ($list->status_categorie == 'active')
+                                            <span class="badge badge-success"><i
+                                                    class="ti ti-point-filled"></i>Active</span>
+                                        @else
+                                            <span class="badge badge-danger"><i
+                                                    class="ti ti-point-filled"></i>Inactive</span>
+                                        @endif
+                                    </td>
+                                    <td>
+                                        <div class="action-icon d-inline-flex">
+                                            <a href="#" class="me-2" data-bs-toggle="modal"
+                                                data-bs-target="#edit_blog-category{{ $list->idcategorie_blog }}"><i
+                                                    class="ti ti-edit"></i></a>
+                                            <a href="javascript:void(0);" data-bs-toggle="modal"
+                                                data-bs-target="#delete_modal{{ $list->idcategorie_blog }}"><i
+                                                    class="ti ti-trash"></i></a>
+                                        </div>
+                                        <div class="modal fade" id="edit_blog-category{{ $list->idcategorie_blog }}">
+                                            <div class="modal-dialog modal-dialog-centered modal-md">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h4 class="modal-title">Modification de la catégorie</h4>
+                                                        <button type="button" class="btn-close custom-btn-close"
+                                                            data-bs-dismiss="modal" aria-label="Close">
+                                                            <i class="ti ti-x"></i>
+                                                        </button>
+                                                    </div>
+                                                    <form
+                                                        action="{{ route('blog-categories.update', $list->idcategorie_blog) }}"
+                                                        method="POST">
+                                                        @csrf
+                                                        @method('PATCH')
+                                                        <div class="modal-body pb-0">
+                                                            <div class="row">
+                                                                <div class="col-md-12">
+                                                                    <div class="mb-3">
+                                                                        <label class="form-label">Catégorie</label>
+                                                                        <input class="form-control"
+                                                                            placeholder="Catégorie" type="text"
+                                                                            required name="libelle"
+                                                                            value="{{ $list->libelle_categorie }}">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-12">
+                                                                    <div class="mb-3">
+                                                                        <label class="form-label">Statut</label>
+                                                                        <br>
+                                                                        <select name="statut" required class="select">
+                                                                            <option value="{{ $list->status_categorie }}">
+                                                                                Sélectionne</option>
+                                                                            <option value="active">Active</option>
+                                                                            <option value="inactive">Inactive</option>
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-white border me-2"
+                                                                data-bs-dismiss="modal">Annuler</button>
+                                                            <button type="submit" class="btn btn-primary">Enregistrer les
+                                                                modifications</button>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="modal fade" id="delete_modal{{ $list->idcategorie_blog }}">
+                                            <div class="modal-dialog modal-dialog-centered">
+                                                <div class="modal-content">
+                                                    <form
+                                                        action="{{ route('blog-categories.destroy', $list->idcategorie_blog) }}"
+                                                        method="POST">
+                                                        @csrf
+                                                        @method('DELETE')
+                                                        <div class="modal-body text-center">
+                                                            <span
+                                                                class="avatar avatar-xl bg-transparent-danger text-danger mb-3">
+                                                                <i class="ti ti-trash-x fs-36"></i>
+                                                            </span>
+                                                            <h4 class="mb-1">Confirmer la suppression</h4>
+                                                            <p class="mb-3">You want to delete all the marked items, this
+                                                                <br>
+                                                                cant be undone once you
+                                                                delete.</p>
+                                                            <div class="d-flex justify-content-center">
+                                                                <a href="javascript:void(0);" class="btn btn-light me-3"
+                                                                    data-bs-dismiss="modal">Annuler</a>
+                                                                <button type="submit" class="btn btn-danger">Oui,
+                                                                    Supprimer</button>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            @endforeach
                         </tbody>
                     </table>
                 </div>
             </div>
         </div>
-
     </div>
-
-    <!-- Add Tag -->
-    <div class="modal fade" id="add_blog-category">
-        <div class="modal-dialog modal-dialog-centered modal-md">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h4 class="modal-title">Add Blog Category</h4>
-                    <button type="button" class="btn-close custom-btn-close" data-bs-dismiss="modal"
-                        aria-label="Close">
-                        <i class="ti ti-x"></i>
-                    </button>
-                </div>
-                <form action="blog-categories.html">
-                    <div class="modal-body pb-0">
-                        <div class="row">
-
-                            <div class="col-md-12">
-                                <div class="mb-3">
-                                    <label class="form-label">Tag</label>
-                                    <input class="input-tags form-control" placeholder="Add new" type="text"
-                                        data-role="tagsinput" name="Label" value="HRMS,Recruitment,HRTech">
-                                </div>
-                            </div>
-                            <div class="col-md-12">
-                                <div class="mb-3">
-                                    <label class="form-label">Status</label>
-                                    <select class="select">
-                                        <option>Active</option>
-                                        <option>Inactive</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-white border me-2" data-bs-dismiss="modal">Cancel</button>
-                        <button type="submit" class="btn btn-primary">Add Tag</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-    <!-- /Add Tag -->
-
-    <!-- Edit Tag -->
-    <div class="modal fade" id="edit_blog-category">
-        <div class="modal-dialog modal-dialog-centered modal-md">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h4 class="modal-title">Edit Blog Category</h4>
-                    <button type="button" class="btn-close custom-btn-close" data-bs-dismiss="modal"
-                        aria-label="Close">
-                        <i class="ti ti-x"></i>
-                    </button>
-                </div>
-                <form action="blog-categories.html">
-                    <div class="modal-body pb-0">
-                        <div class="row">
-
-                            <div class="col-md-12">
-                                <div class="mb-3">
-                                    <label class="form-label">Tag</label>
-                                    <input class="input-tags form-control" placeholder="Add new" type="text"
-                                        data-role="tagsinput" name="Label" value="HRMS,Recruitment,HRTech">
-                                </div>
-                            </div>
-                            <div class="col-md-12">
-                                <div class="mb-3">
-                                    <label class="form-label">Status</label>
-                                    <select class="select">
-                                        <option>Active</option>
-                                        <option>Inactive</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-white border me-2" data-bs-dismiss="modal">Cancel</button>
-                        <button type="submit" class="btn btn-primary">Save Changes</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-    <!-- /Edit Tag -->
-
-    <!-- Delete Modal -->
-    <div class="modal fade" id="delete_modal">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-body text-center">
-                    <span class="avatar avatar-xl bg-transparent-danger text-danger mb-3">
-                        <i class="ti ti-trash-x fs-36"></i>
-                    </span>
-                    <h4 class="mb-1">Confirm Delete</h4>
-                    <p class="mb-3">You want to delete all the marked items, this cant be undone once you
-                        delete.</p>
-                    <div class="d-flex justify-content-center">
-                        <a href="javascript:void(0);" class="btn btn-light me-3" data-bs-dismiss="modal">Cancel</a>
-                        <a href="blog-categories.html" class="btn btn-danger">Yes, Delete</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- /Delete Modal -->
 @endsection

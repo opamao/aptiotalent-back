@@ -749,9 +749,9 @@
                                  <li><a href="{{ url('blog-comments') }}"
                                          class="{{ Request::is('blog-comments') ? 'active' : '' }}">Comments</a>
                                  </li>
-                                 <li><a href="{{ url('blog-tags') }}"
+                                 {{-- <li><a href="{{ url('blog-tags') }}"
                                          class="{{ Request::is('blog-tags') ? 'active' : '' }}">Blog Tags</a>
-                                 </li>
+                                 </li> --}}
                              </ul>
                          </li>
                          <li>

@@ -3,56 +3,56 @@
 ])
 @push('csss')
     <!-- Select2 CSS -->
-    <link rel="stylesheet" href="assets/plugins/select2/css/select2.min.css">
+    <link rel="stylesheet" href="{{ URL::asset('') }}assets/plugins/select2/css/select2.min.css">
 
     <!-- Fontawesome CSS -->
-    <link rel="stylesheet" href="assets/plugins/fontawesome/css/fontawesome.min.css">
-    <link rel="stylesheet" href="assets/plugins/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="{{ URL::asset('') }}assets/plugins/fontawesome/css/fontawesome.min.css">
+    <link rel="stylesheet" href="{{ URL::asset('') }}assets/plugins/fontawesome/css/all.min.css">
 
     <!-- Color Picker Css -->
-    <link rel="stylesheet" href="assets/plugins/flatpickr/flatpickr.min.css">
-    <link rel="stylesheet" href="assets/plugins/@simonwep/pickr/themes/nano.min.css">
+    <link rel="stylesheet" href="{{ URL::asset('') }}assets/plugins/flatpickr/flatpickr.min.css">
+    <link rel="stylesheet" href="{{ URL::asset('') }}assets/plugins/@simonwep/pickr/themes/nano.min.css">
 
     <!-- Daterangepikcer CSS -->
-    <link rel="stylesheet" href="assets/plugins/daterangepicker/daterangepicker.css">
+    <link rel="stylesheet" href="{{ URL::asset('') }}assets/plugins/daterangepicker/daterangepicker.css">
 
     <!-- Bootstrap Tagsinput CSS -->
-    <link rel="stylesheet" href="assets/plugins/bootstrap-tagsinput/bootstrap-tagsinput.css">
+    <link rel="stylesheet" href="{{ URL::asset('') }}assets/plugins/bootstrap-tagsinput/bootstrap-tagsinput.css">
 
     <!-- Datatable CSS -->
-    <link rel="stylesheet" href="assets/css/dataTables.bootstrap5.min.css">
+    <link rel="stylesheet" href="{{ URL::asset('') }}assets/css/dataTables.bootstrap5.min.css">
 
     <!-- Select2 CSS -->
-    <link rel="stylesheet" href="assets/plugins/select2/css/select2.min.css">
+    <link rel="stylesheet" href="{{ URL::asset('') }}assets/plugins/select2/css/select2.min.css">
 
     <!-- Main CSS -->
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="{{ URL::asset('') }}assets/css/style.css">
 @endpush
 @push('scripts')
     <!-- Slimscroll JS -->
-    <script src="assets/js/jquery.slimscroll.min.js"></script>
+    <script src="{{ URL::asset('') }}assets/js/jquery.slimscroll.min.js"></script>
 
     <!-- Color Picker JS -->
-    <script src="assets/plugins/@simonwep/pickr/pickr.es5.min.js"></script>
+    <script src="{{ URL::asset('') }}assets/plugins/@simonwep/pickr/pickr.es5.min.js"></script>
 
     <!-- Datatable JS -->
-    <script src="assets/js/jquery.dataTables.min.js"></script>
-    <script src="assets/js/dataTables.bootstrap5.min.js"></script>
+    <script src="{{ URL::asset('') }}assets/js/jquery.dataTables.min.js"></script>
+    <script src="{{ URL::asset('') }}assets/js/dataTables.bootstrap5.min.js"></script>
 
     <!-- Daterangepikcer JS -->
-    <script src="assets/js/moment.js"></script>
-    <script src="assets/plugins/daterangepicker/daterangepicker.js"></script>
-    <script src="assets/js/bootstrap-datetimepicker.min.js"></script>
+    <script src="{{ URL::asset('') }}assets/js/moment.js"></script>
+    <script src="{{ URL::asset('') }}assets/plugins/daterangepicker/daterangepicker.js"></script>
+    <script src="{{ URL::asset('') }}assets/js/bootstrap-datetimepicker.min.js"></script>
 
     <!-- Select2 JS -->
-    <script src="assets/plugins/select2/js/select2.min.js"></script>
+    <script src="{{ URL::asset('') }}assets/plugins/select2/js/select2.min.js"></script>
 
     <!-- Bootstrap Tagsinput JS -->
-    <script src="assets/plugins/bootstrap-tagsinput/bootstrap-tagsinput.js"></script>
+    <script src="{{ URL::asset('') }}assets/plugins/bootstrap-tagsinput/bootstrap-tagsinput.js"></script>
 
     <!-- Custom JS -->
-    <script src="assets/js/theme-colorpicker.js"></script>
-    <script src="assets/js/script.js"></script>
+    <script src="{{ URL::asset('') }}assets/js/theme-colorpicker.js"></script>
+    <script src="{{ URL::asset('') }}assets/js/script.js"></script>
 @endpush
 
 @section('content')
@@ -61,16 +61,16 @@
         <!-- Breadcrumb -->
         <div class="d-md-flex d-block align-items-center justify-content-between page-breadcrumb mb-3">
             <div class="my-auto mb-2">
-                <h2 class="mb-1">Companies</h2>
+                <h2 class="mb-1">Entreprises</h2>
                 <nav>
                     <ol class="breadcrumb mb-0">
                         <li class="breadcrumb-item">
-                            <a href="index.html"><i class="ti ti-smart-home"></i></a>
+                            <a href="#"><i class="ti ti-smart-home"></i></a>
                         </li>
                         <li class="breadcrumb-item">
                             Application
                         </li>
-                        <li class="breadcrumb-item active" aria-current="page">Companies List</li>
+                        <li class="breadcrumb-item active" aria-current="page">Liste entreprise</li>
                     </ol>
                 </nav>
             </div>
@@ -79,24 +79,24 @@
                     <div class="dropdown">
                         <a href="javascript:void(0);" class="dropdown-toggle btn btn-white d-inline-flex align-items-center"
                             data-bs-toggle="dropdown">
-                            <i class="ti ti-file-export me-1"></i>Export
+                            <i class="ti ti-file-export me-1"></i>Exporter
                         </a>
                         <ul class="dropdown-menu  dropdown-menu-end p-3">
                             <li>
                                 <a href="javascript:void(0);" class="dropdown-item rounded-1"><i
-                                        class="ti ti-file-type-pdf me-1"></i>Export as PDF</a>
+                                        class="ti ti-file-type-pdf me-1"></i>Exporter en PDF</a>
                             </li>
                             <li>
                                 <a href="javascript:void(0);" class="dropdown-item rounded-1"><i
-                                        class="ti ti-file-type-xls me-1"></i>Export as Excel </a>
+                                        class="ti ti-file-type-xls me-1"></i>Exporter en Excel </a>
                             </li>
                         </ul>
                     </div>
                 </div>
                 <div class="mb-2">
                     <a href="#" data-bs-toggle="modal" data-bs-target="#add_company"
-                        class="btn btn-primary d-flex align-items-center"><i class="ti ti-circle-plus me-2"></i>Add
-                        Company</a>
+                        class="btn btn-primary d-flex align-items-center"><i class="ti ti-circle-plus me-2"></i>Ajouter une
+                        entreprise</a>
                 </div>
                 <div class="ms-2 head-icons">
                     <a href="javascript:void(0);" class="" data-bs-toggle="tooltip" data-bs-placement="top"
@@ -187,11 +187,6 @@
                     <table class="table datatable">
                         <thead class="thead-light">
                             <tr>
-                                <th class="no-sort">
-                                    <div class="form-check form-check-md">
-                                        <input class="form-check-input" type="checkbox" id="select-all">
-                                    </div>
-                                </th>
                                 <th>Company Name</th>
                                 <th>Email</th>
                                 <th>Phone</th>
@@ -205,11 +200,6 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td>
-                                    <div class="form-check form-check-md">
-                                        <input class="form-check-input" type="checkbox">
-                                    </div>
-                                </td>
                                 <td>
                                     <div class="d-flex align-items-center file-name-icon">
                                         <a href="{{ url('company-details') }}"
@@ -274,11 +264,6 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td>
-                                    <div class="form-check form-check-md">
-                                        <input class="form-check-input" type="checkbox">
-                                    </div>
-                                </td>
                                 <td>
                                     <div class="d-flex align-items-center file-name-icon">
                                         <a href="company-details.html" class="avatar avatar-md border rounded-circle">
@@ -1301,8 +1286,8 @@
                                         <label class="form-label">Pipeline <span class="text-danger">
                                                 *</span></label>
                                         <a href="#" class="add-new text-primary" data-bs-toggle="modal"
-                                            data-bs-target="#add_pipeline"><i
-                                                class="ti ti-plus text-primary me-1"></i>Add New</a>
+                                            data-bs-target="#add_pipeline"><i class="ti ti-plus text-primary me-1"></i>Add
+                                            New</a>
                                     </div>
                                     <select class="select">
                                         <option>Select</option>

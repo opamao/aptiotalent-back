@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('publicites', function (Blueprint $table) {
             $table->uuid('idpub')->primary();
             $table->uuid('entreprise_id')->nullable();
-            $table->foreign('entreprise_id')->references('id')->on('users');
+            $table->foreign('entreprise_id')->references('idcompany')->on('company');
             $table->string('titre_pub')->nullable();
             $table->text('description_pub')->nullable();
             $table->string('type_pub')->comment('banniere, statut, fond, splash');

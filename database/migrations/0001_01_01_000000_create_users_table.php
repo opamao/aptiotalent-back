@@ -13,20 +13,16 @@ return new class extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->uuid('id')->primary();
-            $table->string('fichier_registre')->nullable();
-            $table->string('logo')->nullable();
-            $table->string('numero_registre')->nullable();
-            $table->string('type_entreprise')->nullable()->comment('IT Technology Solution');
-            $table->string('website')->nullable();
-            $table->string('creation_date')->nullable();
-            $table->string('revenu')->nullable();
-            $table->longText('description_entreprise')->nullable();
             $table->string('phone')->unique();
-            $table->string('name');
+            $table->string('first_name');
+            $table->string('last_name');
+            $table->string('username');
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->string('status')->comment('active, inactive');
+            $table->uuid('entreprise_id')->nullable();
+            $table->foreign('entreprise_id')->references('idcompany')->on('company');
             $table->rememberToken();
             $table->timestamps();
         });
@@ -55,5 +51,11 @@ return new class extends Migration
         Schema::dropIfExists('users');
         Schema::dropIfExists('password_reset_tokens');
         Schema::dropIfExists('sessions');
+        Schema::table('users', function (Blueprint $table) {
+            $table->dropForeign([
+                'entreprise_id',
+            ]);
+            $table->dropColumn('entreprise_id');
+        });
     }
 };

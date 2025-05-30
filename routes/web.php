@@ -3,6 +3,7 @@
 use App\Http\Controllers\BlogsController;
 use App\Http\Controllers\CategoriesBlogsController;
 use App\Http\Controllers\CommentsBlogsController;
+use App\Http\Controllers\CompanyController;
 use App\Http\Controllers\FaqsController;
 use App\Http\Controllers\JobCategorieController;
 use App\Http\Controllers\JobExperienceController;
@@ -169,9 +170,7 @@ Route::get('contacts-grid', function () {
 Route::get('contact-details', function () {
     return view('crm.contact-details');
 });
-Route::get('companies-grid', function () {
-    return view('crm.companies-crm');
-});
+Route::resource('companies-grid', CompanyController::class);
 Route::get('company-details', function () {
     return view('crm.company-details');
 });

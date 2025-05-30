@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('gallerie_company', function (Blueprint $table) {
             $table->uuid('idgallerie');
             $table->uuid('entreprise_id')->nullable();
-            $table->foreign('entreprise_id')->references('id')->on('users');
+            $table->foreign('entreprise_id')->references('idcompany')->on('company');
             $table->string('gallerie');
             $table->timestamps();
         });

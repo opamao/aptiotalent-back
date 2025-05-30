@@ -14,6 +14,8 @@ return new class extends Migration
         Schema::create('review_company', function (Blueprint $table) {
             $table->uuid('idreview')->primary();
             $table->integer('note');
+            $table->uuid('entreprise_id');
+            $table->foreign('entreprise_id')->references('idcompany')->on('company');
             $table->uuid('candidat_id');
             $table->foreign('candidat_id')->references('idcandidat')->on('candidates');
             $table->timestamps();
@@ -28,8 +30,10 @@ return new class extends Migration
         Schema::dropIfExists('review_company');
         Schema::table('review_company', function (Blueprint $table) {
             $table->dropForeign([
+                'entreprise_id',
                 'candidat_id',
             ]);
+            $table->dropColumn('entreprise_id');
             $table->dropColumn('candidat_id');
         });
     }
